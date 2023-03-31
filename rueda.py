@@ -12,13 +12,13 @@ GPIO.setup(in2, GPIO.OUT)
 
 while True:
     opcion=input("Escoje una opcion: ")
-    if (opcion == '1'):  # Si el comando es '1'
+    if (opcion == 1):  # Si el comando es '1'
         GPIO.output(in1, GPIO.LOW)  # GIRO DERECHA
         GPIO.output(in2, GPIO.HIGH)
-    elif (opcion == '2'):  # Si el comando es '2'
+    elif (opcion ==2):  # Si el comando es '2'
         GPIO.output(in1, GPIO.HIGH)  # GIRO IZQUIERDA
         GPIO.output(in2, GPIO.LOW)
-    elif (opcion == '3'):  # Si el comando es '3'
+    elif (opcion == 3):  # Si el comando es '3'
         GPIO.output(in1, GPIO.LOW)  # PARA
         GPIO.output(in2, GPIO.LOW)
 
