@@ -1,25 +1,29 @@
 import RPi.GPIO as GPIO
 import time
 
-in1 = 6   # Pin que controla el sentido de giro Motor A
-in2 = 5   # Pin que controla el sentido de giro Motor A
+# Define los pines que controlan el puente H
+in1 = 5
+in2 = 6
 
+# Configura la Raspberry Pi
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(in1, GPIO.OUT)   # Configura los pines como salida
+GPIO.setup(in1, GPIO.OUT)
 GPIO.setup(in2, GPIO.OUT)
 
-
-
 while True:
-    opcion=input("Escoje una opcion: ")
-    if (opcion == 1):  # Si el comando es '1'
-        GPIO.output(in1, GPIO.LOW)  # GIRO DERECHA
+    comando = input("Ingresa un comando (1, 2 o 3): ")
+    
+    if comando == '1':  # Si el comando es '1'
+        GPIO.output(in1, GPIO.LOW)  # Giro hacia la derecha
         GPIO.output(in2, GPIO.HIGH)
-    elif (opcion ==2):  # Si el comando es '2'
-        GPIO.output(in1, GPIO.HIGH)  # GIRO IZQUIERDA
+    elif comando == '2':  # Si el comando es '2'
+        GPIO.output(in1, GPIO.HIGH)  # Giro hacia la izquierda
         GPIO.output(in2, GPIO.LOW)
-    elif (opcion == 3):  # Si el comando es '3'
-        GPIO.output(in1, GPIO.LOW)  # PARA
+    elif comando == '3':  # Si el comando es '3'
+        GPIO.output(in1, GPIO.LOW)  # Para el motor
         GPIO.output(in2, GPIO.LOW)
+        
+    time.sleep(0.1)  # Pequeña pausa para evitar la sobrecarga del procesador
+
 
 
