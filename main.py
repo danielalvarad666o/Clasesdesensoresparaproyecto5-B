@@ -7,8 +7,8 @@ from Clases import rueda,sensoredeGas
 #Instancias------------------------------------
 elmenu=menu.interfasMenu()
 larueda=rueda.MotorDriver()
-gas=sensoredeGas.AnalogRead(board.A4)
-gas1=sensoredeGas.AnalogRead(board.A5)
+gas=sensoredeGas.AnalogRead(26)
+gas1=sensoredeGas.AnalogRead(19)
 
 #variables---------------------------------------
 opcion=0
