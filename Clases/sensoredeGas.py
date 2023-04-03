@@ -13,10 +13,12 @@ class MQ4:
         return adc_value
 
     def read_rs(self):
-        adc_value = self.read_raw()
-        voltage = adc_value / 1023.0 * 3.3
-        rs = (3.3 - voltage) / voltage * self.RL
-        return rs
+     voltage = self.read_raw()
+     if voltage == 0:
+        return 0
+     rs = (3.3 - voltage) / voltage * self.RL
+     return rs
+
 
     def read_ppm(self):
         rs = self.read_rs()
