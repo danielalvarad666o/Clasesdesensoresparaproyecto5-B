@@ -5,7 +5,7 @@ class MQ4:
     def __init__(self, pin=0):
         self.pin = pin
         self.RL = 1  # Resistance of the load resistor in kilo ohms
-        GPIO.setmode(GPIO.BOARD)
+        GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.pin, GPIO.IN)
 
     def read_raw(self):
@@ -25,4 +25,3 @@ class MQ4:
 
     def __del__(self):
         GPIO.cleanup()
-
