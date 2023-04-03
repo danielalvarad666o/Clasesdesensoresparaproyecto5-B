@@ -4,11 +4,13 @@ import board
 from Menu import menu
 from Clases import rueda,sensoredeGas
 
+
 #Instancias------------------------------------
+
 elmenu=menu.interfasMenu()
 larueda=rueda.MotorDriver()
-gas=sensoredeGas.AnalogRead(26)
-gas1=sensoredeGas.AnalogRead(19)
+eldegas=sensoredeGas.MQ4(26)
+
 
 #variables---------------------------------------
 opcion=0
@@ -19,7 +21,7 @@ while opcion!=2:
      
      if opcion==1:
              larueda.go_left()
-             gas.read()
-             gas1.read()
+             ppm_value = eldegas.read_ppm()
+             print("Valor de PPM: {}".format(ppm_value))
              
          
