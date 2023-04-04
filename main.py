@@ -1,7 +1,8 @@
 
 #importaciones---------------------------------
 from Menu import menu
-from Interface import interfaceRueda
+from Interface import interfaceRueda,interfaceSerial
+
 
 
 
@@ -20,6 +21,9 @@ while opcion!=2:
      opcion=elmenu.MostrarMenu()
      
      if opcion==1:
+             elserial=interfaceSerial.interfaceSerial()
+     
+     elif opcion==2:
              lainterfacerueda=interfaceRueda.interfaceRueda()
              
              
