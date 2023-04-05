@@ -14,5 +14,5 @@ class interfaceDHT:
          hu=self.sensordht.read_humidity()
          temp=self.sensordht.read_temperature()
          
-         print("Humedad".format(hu),"Temperatura".format(temp))
+         print(format(hu),format(temp))
         
