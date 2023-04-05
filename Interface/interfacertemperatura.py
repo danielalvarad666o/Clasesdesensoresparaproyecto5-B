@@ -9,7 +9,7 @@ class interfaceDHT:
         
         
         
-    def leertemphum(self) -> any:
+    def leertemphum(self):
        for i in range(5):
          hu=self.sensordht.read_humidity()
          temp=self.sensordht.read_temperature()

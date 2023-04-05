@@ -8,7 +8,7 @@ from Interface import interfaceRueda,interfaceSerial,interfacertemperatura
 
 #Instancias------------------------------------
 elmenu=menu.interfasMenu()
-dht11=interfacertemperatura.interfaceDHT()
+
 
 
 
@@ -27,6 +27,7 @@ while opcion!=4:
      elif opcion==2:
              lainterfacerueda=interfaceRueda.interfaceRueda()
      elif opcion==3:
+             dht11=interfacertemperatura.interfaceDHT()
              dht11.leertemphum()
              
              
