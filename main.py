@@ -18,7 +18,7 @@ dht11=interfacertemperatura.interfaceDHT()
 opcion=0
 
 #logicaaa--------------------------------------
-while opcion!=2:
+while opcion!=4:
      opcion=elmenu.MostrarMenu()
      
      if opcion==1:

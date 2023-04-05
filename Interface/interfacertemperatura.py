@@ -11,8 +11,8 @@ class interfaceDHT:
         
     def leertemphum(self) -> any:
        for i in range(5):
-        hu=self.sensordht.read_humidity()
-        temp=self.sensordht.read_temperature()
-        self.valores={"Humedada: {}, Temperatura: {}".format(hu, temp)}
-        return self.valores
+         hu=self.sensordht.read_humidity()
+         temp=self.sensordht.read_temperature()
+         
+         return format(hu,temp)
         
