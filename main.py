@@ -1,13 +1,14 @@
 
 #importaciones---------------------------------
 from Menu import menu
-from Interface import interfaceRueda,interfaceSerial
+from Interface import interfaceRueda,interfaceSerial,interfacertemperatura
 
 
 
 
 #Instancias------------------------------------
 elmenu=menu.interfasMenu()
+dht11=interfacertemperatura.interfaceDHT()
 
 
 
@@ -25,6 +26,10 @@ while opcion!=2:
      
      elif opcion==2:
              lainterfacerueda=interfaceRueda.interfaceRueda()
+     elif opcion==3:
+             dht11.leertemphum()
+             
+             
              
              
             
