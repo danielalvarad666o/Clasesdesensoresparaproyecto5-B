@@ -9,18 +9,19 @@ class SerialReader:
             return self.ser.readline().decode().strip()
         else:
             print("No se ha seleccionado un puerto COM.")
-    
+            
     def select_port(self):
      ports = serial.tools.list_ports.comports()
      print("Puertos COM disponibles:")
      for port in ports:
-        print(port.device)
+        if "COM" in port.device:
+            print(port.device)
     
      selected_port = None
      while not selected_port:
         try:
             selection = input("Selecciona un puerto COM: ")
-            if selection in [port.device for port in ports]:
+            if selection in [port.device for port in ports if "COM" in port.device]:
                 selected_port = selection
                 self.ser = serial.Serial(selected_port, 9600)
                 print(f"Puerto {selected_port} seleccionado.")
