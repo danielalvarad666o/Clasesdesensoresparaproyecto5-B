@@ -18,8 +18,8 @@ class SerialReader:
         portList.append(port.device)
         print(f"{i+1}. {port.device}")
     
-    selected_port = None
-    while not selected_port:
+     selected_port = None
+     while not selected_port:
         try:
             selection = int(input("Selecciona un puerto: "))
             if selection > 0 and selection <= len(ports):
