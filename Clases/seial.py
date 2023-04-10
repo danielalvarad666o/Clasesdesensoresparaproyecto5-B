@@ -13,8 +13,9 @@ class SerialReader:
     def select_port(self):
      ports = serial.tools.list_ports.comports()
      print("Puertos COM disponibles:")
+     print (format(ports)) 
      for port in ports:
-        print (ports) 
+        
         print(port.device)
     
      selected_port = None
